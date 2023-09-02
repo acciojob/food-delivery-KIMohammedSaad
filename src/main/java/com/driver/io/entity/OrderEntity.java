@@ -1,12 +1,18 @@
 package com.driver.io.entity;
 
+import lombok.*;
+
 import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+@Builder
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity(name = "orders")
 public class OrderEntity {
 
@@ -25,7 +31,7 @@ public class OrderEntity {
 
 	@Column(nullable = false)
 	private String userId;
-	
+
 	@Column(nullable = false)
 	private boolean status;
 
